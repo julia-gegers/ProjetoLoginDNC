@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="dnc.png">
+    </header>
+    <main class="main">
+        <img class="jumpy" src="jump.svg">
+        <h1 class="title">Bem vindo ao Jumpy!</h1>
+        <form id="form" class="form">
+            <label class="label" for="name">Nome Completo:</label>
+            <input id="name" class="input"  type="text" placeholder="Nome completo" name="name">
+            <p class="aviso" id="texto1">text</p>
+
+            <label class="label" for="email">Email:</label>
+            <input id="email" class="input" type="email" placeholder="Email@email.com" name="email">
+            <p class="aviso" id="texto2">text</p>
+
+            <label class="label" for="phone">Telefone:</label>
+            <input id="phone" class="input" type="number" placeholder="(00) 0000-0000" name="phone">
+            <p class="aviso" id="texto3">text</p>
+
+            <label class="label" for="cpf">CPF:</label>
+            <input id="cpf" class="input" type="text" placeholder="000.000.000-00" name="cpf">
+            <p class="aviso" id="texto4">text</p>
+
+            <label class="label" for="password">Senha:</label>
+            <input id="password" class="input" type="password" placeholder="********" name="password">
+            <p class="aviso" id="texto5">text</p>
+
+            <button onclick="check()" class="btn" id="btn">Cadastrar</button>
+            <p id="text">text</p>
+
+        </form>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
