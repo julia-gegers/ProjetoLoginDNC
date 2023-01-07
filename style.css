@@ -16,7 +16,8 @@ header{
 }
 
 .logo{
-    width: 15rem;
+    padding: 40px;
+    width: 10rem;
 }
 
 .main{
@@ -87,6 +88,7 @@ header{
 }
 
 .aviso{
+    padding: 5px;
     text-align: right;
     color: #1E1E1E;
     margin-top: px;
