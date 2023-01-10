@@ -1,50 +1,64 @@
-function check(){
+function check()
+{
     let name = document.getElementById('name').value
     let email = document.getElementById('email').value
     let cpf = document.getElementById('cpf').value
     let phone = document.getElementById('phone').value
     let password = document.getElementById('password').value 
-    let form = document.getElementById('form').value
 
-    let texto1 = document.getElementById('texto1')
-    let texto2 = document.getElementById('texto2')
-    let texto3 = document.getElementById('texto3')
-    let texto4 = document.getElementById('texto4')
-    let texto5 = document.getElementById('texto5')
-    
-
-    let text = document.getElementById('text')
-
-    if(name, email, cpf, phone, password == ''){
-        texto1.textContent = 'Campo obrigatório'
-        texto1.style.color = 'red'
-
-        texto2.textContent = 'Campo obrigatório'
-        texto2.style.color = 'red'
-
-        texto2.textContent = 'Campo obrigatório'
-        texto2.style.color = 'red'
-
-        texto3.textContent = 'Campo obrigatório'
-        texto3.style.color = 'red'
-
-        texto4.textContent = 'Campo obrigatório'
-        texto4.style.color = 'red'
-
-        texto5.textContent = 'Campo obrigatório'
-        texto5.style.color = 'red'
-
-        text.textContent = 'Campos obrigatórios não registrados'
-        text.style.color = 'red'
-        event.preventDefault()
+    let avisoName = document.getElementById('avisoName')
+    let avisoEmail = document.getElementById('avisoEmail')
+    let avisoCpf = document.getElementById('avisoCpf')
+    let avisoPhone = document.getElementById('avisoPhone')
+    let avisoPassword = document.getElementById('avisoPassword')
+    let mensagem = document.getElementById('mensagem')
+	
+    let isErro = false;
+	avisoName.textContent = '';
+	avisoEmail.textContent = '';
+	avisoCpf.textContent = '';
+	avisoPhone.textContent = '';
+	avisoPassword.textContent = '';
+	mensagem.textContent = '';
+	
+    if( name == '' )
+	{
+        avisoName.textContent = 'Campo obrigatório'
+        isErro = true;
     }
-    
- else {
-    text.textContent = 'Sucesso'
-    text.style.color = 'green'
-}
-}
-    
-    
-    
 
+    if( email == '' )
+    {
+        avisoEmail.textContent = 'Campo obrigatório'
+        isErro = true;
+    }
+
+    if( phone == '' )
+    {
+        avisoPhone.textContent = 'Campo obrigatório'
+        isErro = true;
+    }
+
+    if( cpf == '' )
+    {
+        avisoCpf.textContent = 'Campo obrigatório'
+        isErro = true;
+    }
+
+    if( password == '' )
+    {
+        avisoPassword.textContent = 'Campo obrigatório'
+        isErro = true;
+    }
+
+    if( isErro == true )
+    {
+        mensagem.textContent = 'Campos obrigatórios não registrados';
+		mensagem.style.color = 'red';
+        event.preventDefault();
+		return;
+    }
+
+	mensagem.textContent = 'Sucesso';
+	mensagem.style.color = 'green';
+}
